@@ -1,0 +1,259 @@
+.complexo1 {
+  position: absolute;
+  width: 108px;
+  height: 134px;
+  left: 125px;
+  top: 842px;
+  background: url(complexo.jpg);
+  background-size: cover;
+  border-radius: 8px;
+  transition: transform 0.3s; /* Mantenha essa linha para suavizar a animação */
+}
+
+/* Adicione esta parte no início do seu arquivo CSS (styles.css) */
+.dropbtn {
+  position: absolute;
+  width: 200px;
+  height: 45px;
+  left: 50%; /* Alterado de 'center' para '50%' */
+  top: 9px;
+  background-color: #D83737;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 34px;
+  transform: translateX(-50%); /* Adicionado para centralizar o elemento */
+}
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* Modifique esta parte para posicionar o menu suspenso no centro da barra laranja */
+.rectangle-23 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown {
+  position: absolute;
+  top: 10px;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.scroll-container {
+  width: 100%;
+  height: 6000px;
+  overflow-y: scroll;
+}
+
+.foto-topo-1 {
+  position: absolute;
+  width: 1450px;
+  height: 286px;
+  left: 0px;
+  top: 70px;
+  background: url('foto topo.jpg') no-repeat center;
+  background-size: cover;
+  border-radius: 0px 0px 143px 0px;
+}
+
+.img-4d2bd69a {
+  position: absolute;
+  width: 1258px;
+  height: 931px;
+  left: 81px;
+  top: 400px;
+  background: url('4d2bd69a-fa17-4212-8608-27a06c0fb0e1.png') no-repeat center;
+  background-size: cover;
+  border-radius: 101px;
+  opacity: 0.1;
+}
+/* ... outras classes ... */
+
+.welcome-text {
+  position: absolute;
+  width: 950px;
+  height: 130px;
+  left: 30px;
+  top: 600px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 15px;
+  text-align: center;
+  color: #08B1BC;
+}
+
+/* ... outras classes ... */
+
+.excellence-text {
+  position: absolute;
+  width: 668px;
+  height: 303px;
+  left: 108px;
+  top: 650px;
+  font-family: 'Kameron', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  color: #08B1BC;
+}
+
+/* ... outras classes ... */
+
+.img-5731 {
+  position: absolute;
+  width: 462px;
+  height: 559px;
+  left: 108px;
+  top: 1450px;
+  background: url(IMG_5731.jpg);
+  background-size: cover;
+  border-radius: 82px;
+}
+.rectangle-23 {
+  position: absolute;
+  width: 1450px;
+  height: 75px;
+  left: 0px;
+  top: 0px;
+  background: #EF8E1C;
+}
+.whatsapp {
+  position: absolute;
+  width: 56px;
+  height: 58px;
+  left: 11px;
+  top: 7px;
+  background: url(whatsapp.jpg);
+  border-radius: 43px;
+}
+.phone-number {
+  position: absolute;
+  width: 100px;
+  height: 39px;
+  left: 75px;
+  top: 17px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 15px;
+  color: #FFFFFF;
+}
+
+
+.complexo1 {
+  position: absolute;
+  width: 108px;
+  height: 134px;
+  left: 125px;
+  top: 842px;
+  background: url(complexo.jpg);
+  background-size: cover;
+  border-radius: 8px;
+  transition: transform 0.3s; /* Mantenha essa linha para suavizar a animação */
+}
+
+
+/* ... outras classes ... */
+
+.locais-de-atendimento {
+  position: absolute;
+  width: 336px;
+  height: 195px;
+  left: 131px;
+  top: 779px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  color:#08B1BC;
+}
+
+/* ... outras classes ... */
+
+.endereco {
+  position: absolute;
+  width: 241px;
+  height: 295px;
+  left: 245px;
+  top: 827px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 15px;
+  color: #08B1BC;
+}
+.alfa {
+  position: absolute;
+  width: 54px;
+  height: 67px;
+  left: 125px;
+  top: 1000px;
+  background: url(alfa.jpg);
+  border-radius: 8px;
+}
+
+.endereco-alfa {
+  position: absolute;
+  width: 270px;
+  height: 150px;
+  left: 245px;
+  top: 988px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 15px;
+  color: #08B1BC;
+}
+/* ... outras classes ... */
+
+/* ... outras classes ... */
+
