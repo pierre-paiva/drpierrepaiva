@@ -1,36 +1,33 @@
-.complexo1 {
-  position: absolute;
-  width: 108px;
-  height: 134px;
-  left: 125px;
-  top: 842px;
-  background: url(complexo.jpg);
-  background-size: cover;
-  border-radius: 8px;
-  transition: transform 0.3s; /* Mantenha essa linha para suavizar a animação */
+/* Cor de fundo */
+.cor-de-fundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(134, 134, 189) 35%, rgba(81,158,174,1) 100%);
+  background-blend-mode: multiply, normal;
+  z-index: -1;
 }
 
-/* Adicione esta parte no início do seu arquivo CSS (styles.css) */
 .dropbtn {
-  position: absolute;
-  width: 200px;
-  height: 45px;
-  left: 50%; /* Alterado de 'center' para '50%' */
-  top: 9px;
+  width: 222px;
+  top: 80px;
   background-color: #D83737;
   color: white;
   font-size: 16px;
   border: none;
   cursor: pointer;
   border-radius: 34px;
-  transform: translateX(-50%); /* Adicionado para centralizar o elemento */
 }
-
-
 
 .dropdown {
   position: relative;
-  display: inline-block;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .dropdown-content {
@@ -63,197 +60,150 @@
   background-color: #3e8e41;
 }
 
-/* Modifique esta parte para posicionar o menu suspenso no centro da barra laranja */
-.rectangle-23 {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.dropdown {
-  position: absolute;
-  top: 10px;
-}
-
 body, html {
   margin: 0;
   padding: 0;
 }
 
-.scroll-container {
-  width: 100%;
-  height: 6000px;
-  overflow-y: scroll;
+/* Contêiner principal */
+.main-container {
+  min-height: 2000vh;
+  position: relative;
 }
 
-.foto-topo-1 {
+.whatsapp-container {
+  display: flex;
+  align-items: center;
   position: absolute;
-  width: 1450px;
-  height: 286px;
-  left: 0px;
-  top: 70px;
-  background: url('foto topo.jpg') no-repeat center;
-  background-size: cover;
-  border-radius: 0px 0px 143px 0px;
+  top: 3px;
+  left: 11px;
 }
-
-.img-4d2bd69a {
-  position: absolute;
-  width: 1258px;
-  height: 931px;
-  left: 81px;
-  top: 400px;
-  background: url('4d2bd69a-fa17-4212-8608-27a06c0fb0e1.png') no-repeat center;
-  background-size: cover;
-  border-radius: 101px;
-  opacity: 0.1;
-}
-/* ... outras classes ... */
-
-.welcome-text {
-  position: absolute;
-  width: 950px;
-  height: 130px;
-  left: 30px;
-  top: 600px;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 15px;
-  text-align: center;
-  color: #08B1BC;
-}
-
-/* ... outras classes ... */
-
-.excellence-text {
-  position: absolute;
-  width: 668px;
-  height: 303px;
-  left: 108px;
-  top: 650px;
-  font-family: 'Kameron', serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  text-align: right;
-  color: #08B1BC;
-}
-
-/* ... outras classes ... */
-
-.img-5731 {
-  position: absolute;
-  width: 462px;
-  height: 559px;
-  left: 108px;
-  top: 1450px;
-  background: url(IMG_5731.jpg);
-  background-size: cover;
-  border-radius: 82px;
-}
-.rectangle-23 {
-  position: absolute;
-  width: 1450px;
-  height: 75px;
-  left: 0px;
-  top: 0px;
-  background: #EF8E1C;
-}
+/* ok */
 .whatsapp {
-  position: absolute;
   width: 56px;
   height: 58px;
-  left: 11px;
-  top: 7px;
   background: url(whatsapp.jpg);
   border-radius: 43px;
+  z-index: 10;
 }
+/* ok */
 .phone-number {
-  position: absolute;
+  margin-left: 10px;
   width: 100px;
   height: 39px;
-  left: 75px;
-  top: 17px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
   line-height: 15px;
   color: #FFFFFF;
+  z-index: 10;
 }
-
-
-.complexo1 {
+/* ok */
+.medica-paciente {
   position: absolute;
-  width: 108px;
-  height: 134px;
-  left: 125px;
-  top: 842px;
-  background: url(complexo.jpg);
+  width: 1445px;
+  height: 275px;
+  top: 68px;
+  background: url("medica-paciente.png");
   background-size: cover;
-  border-radius: 8px;
-  transition: transform 0.3s; /* Mantenha essa linha para suavizar a animação */
+  border-radius: 0px 0px 98px 0px;
 }
-
-
-/* ... outras classes ... */
-
-.locais-de-atendimento {
+.foto-apresenta {
   position: absolute;
-  width: 336px;
-  height: 195px;
-  left: 131px;
-  top: 779px;
+  width: 234px;
+  height: 297.54px;
+  left: 110px;
+  top: 468px;
+  background: url("foto-apresenta.jpg");
+  background-size: 100%;
+  border-radius: 32px 32px 32px 32px;
+  opacity: 1;
+}
+/* Escolha aqui seu exame e saiba mais sobre ele! */
+.exame-text {
+  position: absolute;
+  left: 240px;
+  top: 6px;
+  width: 341px;
+  height: 30px;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #abfdff;
+}
+.texto-apresentacao { 
+  position: absolute;
+  left: 420px;
+  top: 426px;
+  width: 948px;
+  height: 30px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 28px;
-  color:#08B1BC;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 18px;
+  color: #043637;
 }
 
-/* ... outras classes ... */
-
-.endereco {
+.rectangle-2 {
   position: absolute;
-  width: 241px;
-  height: 295px;
-  left: 245px;
-  top: 827px;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 15px;
-  color: #08B1BC;
+  left: 467px;
+  top: 879px;
+  width: 806px;
+  height: 227px;
+  background: #F5F5F5;
+  border-radius: 51px;
 }
-.alfa {
+.custom-text {
   position: absolute;
-  width: 54px;
-  height: 67px;
-  left: 125px;
-  top: 1000px;
-  background: url(alfa.jpg);
-  border-radius: 8px;
+  left: 714px;
+  top: 1440px;
+  width: 804px;
+  height: 177px;
+  font-family: 'Apple Chancery', cursive; /* Substitua por uma fonte do Google Fonts ou uma fonte padrão da web, se necessário */
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 19px;
+  text-indent: 2px;
+  text-decoration: underline;
+  color: #043637;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.endereco-alfa {
+.custom-text-2 {
   position: absolute;
-  width: 270px;
-  height: 150px;
-  left: 245px;
-  top: 988px;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 15px;
-  color: #08B1BC;
+  width: 788px;
+  top: 465px;
+  left: 360px;
+  height: 274px;
+  font-family: 'Apple Chancery', cursive; /* Substitua por uma fonte do Google Fonts ou uma fonte padrão da web, se necessário */
+  font-style: italic;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 19px;
+  text-indent: 2px;
+  color: #f1f1f1;
 }
-/* ... outras classes ... */
 
-/* ... outras classes ... */
+.group-3 {
+  position: absolute;
+  left: 360px;
+  top: 700px;
+  width: 816px;
+  height: 203px;
+  border-radius: 10px;
+}
 
+.group-3 {
+  position: absolute;
+  left: 360px;
+  top: 700px;
+  width: 816px;
+  height: 203px;
+  background-color: rgba(134, 134, 134, 0.89);
+  border-radius: 10px;
+}
