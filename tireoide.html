@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultrassom de Tireoide - Indicações e Informações</title>
+    <style>
+        /* Estilos para o botão e submenu */
+.btn-agendar {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submenu {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.submenu input[type="text"], .submenu input[type="tel"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submenu input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+        /* Reset de margens e espaçamento */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Estilos para o cabeçalho */
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        /* Estilos para títulos */
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para parágrafos e listas */
+        p, ul {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        /* Estilos para seções */
+        section {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(134, 134, 189) 35%, rgba(81,158,174,1) 100%);
+            color: #333;
+            padding: 20px;
+        }
+
+
+        /* Responsividade para dispositivos móveis */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ultrassom de Tireoide</h1>
+    </header>
+    <main>
+        <section>
+            <h2>O que é o exame de ultrassom de tireoide?</h2>
+            <p>O exame de ultrassom de tireoide é um procedimento não invasivo que utiliza ondas sonoras de alta frequência para criar imagens detalhadas da glândula tireoide. Este método é seguro, indolor e amplamente utilizado para avaliar e monitorar diversas condições médicas relacionadas a essa glândula, localizada na parte anterior do pescoço.</p>
+        </section>
+
+        <section>
+            <h2>Patologias que podem ser encontradas no exame</h2>
+            <p>O ultrassom de tireoide pode identificar várias patologias, tais como:</p>
+            <ul>
+                <li><h3>Nódulos tireoidianos</h3>
+                    <p>Para determinar a localização, tamanho, forma e características dos nódulos, e orientar a necessidade de biópsia por agulha fina ou acompanhamento.</p>
+                </li>
+                <li><h3>Bócio</h3>
+                    <p>Para avaliar o aumento do tamanho da glândula tireoide e identificar possíveis nódulos associados.</p>
+                </li>
+                <li><h3>Tireoidite</h3>
+                    <p>Para diagnosticar inflamações da glândula tireoide, como tireoidite de Hashimoto ou tireoidite subaguda.</p>
+                </li>
+                <li><h3>Câncer de tireoide</h3>
+                    <p>Para identificar características suspeitas em nódulos e orientar a necessidade de biópsia e tratamento.</p>
+                </li>
+                <li><h3>Cistos tireoidianos</h3>
+                    <p>Para diferenciar cistos benignos de lesões sólidas e orientar o tratamento adequado.</p>
+                </li>
+                <li><h3>Adenomas tireoidianos</h3>
+                    <p>Para identificar massas benignas na tireoide e monitorar o crescimento e possíveis mudanças ao longo do tempo.</p>
+                </li>
+                <li><h3>Hiperplasia nodular</h3>
+                    <p>Para avaliar a presença de múltiplos nódulos tireoidianos e monitorar sua evolução.</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Agende seu exame</h2>
+            <button id="agendarExame" style="background-color: green; color: white; padding: 10px 20px; cursor: pointer;">Agendar exame</button>
+            <div id="agendarForm" style="display: none;">
+                <form>
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="nome" name="nome" required><br><br>
+                    <label for="tipoExame">Tipo de exame:</label>
+                    <input type="text" id="tipoExame" name="tipoExame" required><br><br>
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" required><br><br>
+                    <button type="submit" id="enviar" style="background-color: green; color: white; padding: 10px 20px; cursor: pointer;">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script>
+        $(document).ready(function() {
+            $("#agendarExame").click(function() {
+                $("#agendarForm").toggle();
+            });
+
+            $("#telefone").mask("(00) 00000-0000");
+
+            $("form").submit(function(event) {
+                event.preventDefault();
+                var nome = $("#nome").val();
+                var tipoExame = $("#tipoExame").val();
+                var telefone = $("#telefone").val();
+                var mensagem = "Nome: " + nome + "%0A" + "Tipo de exame: " + tipoExame + "%0A" + "Telefone: " + telefone;
+                var url = "https://wa.me/558532355951?text=" + encodeURIComponent(mensagem);
+                window.open(url, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
