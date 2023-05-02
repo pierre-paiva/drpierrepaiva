@@ -9,12 +9,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Pierre Paiva - Médico Ultrassonografista</title>
    <style>
+.menu {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        border-radius: 20px;
+    }
+
+    .menu li {
+        position: relative;
+        background-color: #82a0aa; /* Altere para a cor de fundo desejada */
+        border-radius: 5px;
+        padding: 10px 0;
+        text-align: center;
+        width: 30%;
+        border-radius: 27px;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    .menu li:hover {
+        background-color: #ccc; /* Altere para a cor de fundo desejada ao passar o mouse */
+    }
+
+    /* Responsividade para dispositivos móveis */
+    @media screen and (max-width: 768px) {
+        .menu {
+            flex-direction: column;
+        }
+
+        .menu li {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    /* Ajustes do Banner */
+         .banner-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .banner {
+            border-radius: 25px;
+           position: relative;
+           width: 940px;
+           height: 326px;
+           overflow: hidden;
+       }
+
+       .banner li {
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           opacity: 0;
+           transition: opacity 1s;
+       }
+
+       .banner li.active {
+           opacity: 1;
+       }
+       /* icones das redes sociais */
        .face-icon {
     position: absolute;
     top: 13px;
-    left: 329px;
-    width: 53px;
-    height: 57px;
+    left: 49px;
+    width: 33px;
+    height: 33px;
     z-index: 10;
 }
     
@@ -22,10 +88,35 @@
     position: absolute;
     top: 13px;
     left: 10px;
-    width: 53px;
-    height: 57px;
+    width: 33px;
+    height: 33px;
     z-index: 10;
 }
+.face-icon {
+    position: absolute;
+    top: 13px;
+    left: 49px;
+    width: 33px;
+    height: 33px;
+    z-index: 10;
+}
+
+.insta-icon {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    width: 33px;
+    height: 33px;
+    z-index: 10;
+}
+
+@media screen and (max-width: 768px) {
+    .face-icon, .insta-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
 
 
 
@@ -37,10 +128,7 @@
     margin-bottom: 20px;
 }
 
-.foto-container {
-    flex: 1;
-    text-align: center;
-}
+
 
 .foto {
     width: 100%;
@@ -67,7 +155,7 @@
 .agendamento-link {
     display: inline-block;
     padding: 10px 20px; /* Ajuste o preenchimento para alterar o tamanho do retângulo */
-    background-color: red; /* Cor do retângulo */
+    background-color: rgb(192, 179, 179); /* Cor do retângulo */
     color: #0000FF; /* Cor do texto */
     text-decoration: none; /* Remove o sublinhado do link */
     border-radius: 5px; /* Arredonda os cantos do retângulo */
@@ -119,7 +207,7 @@
 
 /* Cor do link visitado */
 .menu a:visited {
-    color: #e5d928; /* Altere para a cor desejada */
+    color: #43401b; /* Altere para a cor desejada */
 }
 
     /* Cor do link normal */
@@ -149,7 +237,7 @@ h2 {
 
     .btn-agendar {
     display: inline-block;
-    background-color: #4CAF50;
+    background-color: #927a7a;
     color: white;
     text-align: center;
     padding: 10px 20px;
@@ -213,7 +301,7 @@ h2 {
         /* Estilos para títulos */
         h1 {
             font-size: 2.2em;
-            margin-bottom: 20px;
+            margin-bottom: -9px;
         }
 
         h2 {
@@ -239,7 +327,7 @@ h2 {
 
         /* Estilos para seções */
         section {
-            background-color: #fff;
+            background-color: #dfeceb;
             border-radius: 5px;
             padding: 20px;
             margin-bottom: 20px;
@@ -248,7 +336,7 @@ h2 {
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(134, 134, 189) 35%, rgba(81,158,174,1) 100%);
+            background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(215, 215, 215) 35%, rgba(81,158,174,1) 100%);
             color: #333;
             padding: 20px;
         }
@@ -276,9 +364,34 @@ h2 {
                 padding: 15px;
             }
         }
-   </style> <!-- Adicione seus arquivos CSS e JavaScript aqui -->
+    </style><!-- Adicione seus arquivos CSS e JavaScript aqui -->
+   <script>
+    window.addEventListener("DOMContentLoaded", function() {
+        var banner = document.getElementById("galfade88");
+        var slides = banner.getElementsByTagName("li");
+        var currentSlide = 0;
+
+        function changeSlide() {
+            slides[currentSlide].classList.remove("active");
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add("active");
+        }
+
+        setInterval(changeSlide, 3400); // Altere o valor para ajustar a velocidade de transição
+    });
+</script>
 </head>
 <body>
+    <!-- Banner -->
+    <div class="banner-container">
+        <ul class="banner" id="galfade88">
+            <li class="active"><img src="b1.jpg" alt="Banner 1"></li>
+            <li><img src="b2.jpg" alt="Banner 2"></li>
+            <li><img src="banner3.jpg" alt="Banner 3"></li>
+        </ul>
+    </div>
+    
+    
     <header>
         
         <a href="https://instagram.com/drpierrepaiva?igshid=YmMyMTA2M2Y=" target="_b
@@ -290,19 +403,10 @@ h2 {
         <h1>Dr. Pierre Paiva</h1>
         <h2>Médico Ultrassonografista</h2>
     </header>
-    <section id="sobre">
-        <div class="foto-container">
-            <img src="foto-apresenta.jpg" alt="Foto de Dr. Pierre Paiva" class="foto">
-        </div>
+    
+        
         <div class="descricao">
-            <p>Olá e seja bem-vindo ao nosso consultório de ultrassonografia!</p>
-
-                <p>Em nosso consultório, temos a missão de oferecer um serviço de ultrassonografia de alta qualidade e confiável, garantindo a você, nosso paciente, uma experiência acolhedora e tranquila. Nossa equipe de profissionais especializados está empenhada em fornecer diagnósticos precisos e orientações claras para o seu bem-estar e saúde.</p>
-                
-                <p>é uma técnica de imagem não invasiva que utiliza ondas sonoras de alta frequência para criar imagens detalhadas do interior do corpo. Este método é seguro e indolor, sendo ideal para monitorar e diagnosticar diversas condições médicas, como gravidez, doenças dos órgãos internos, alterações vasculares, entre outros.</p>
-                
-                
-                <p>Nosso consultório está equipado com tecnologia de ponta e ambiente confortável, projetado para que você se sinta à vontade durante o seu exame. Priorizamos a privacidade e a comunicação aberta com nossos pacientes, esclarecendo dúvidas e fornecendo informações relevantes sobre o procedimento e seus resultados. Convidamos você a navegar pelo nosso site para conhecer melhor nossos serviços e nossa equipe. Se tiver alguma dúvida ou desejar agendar uma consulta, por favor, entre em contato conosco. Estamos ansiosos para cuidar de você e contribuir para sua saúde e bem-estar. Seja bem-vindo e conte conosco!</p>
+            
         </div>
     </section>
     <nav>
@@ -325,7 +429,7 @@ h2 {
                 <li><a href="transvaginal.html">Transvaginal</a></li>
                 <li><a href="mamaria.html">Mamária</a></li>
                 <li><a href="morfologica.html">Morfológica</a></li>
-                <li><a href="vias-urinarias.html">Vias urinárias</a></li>
+                <li><a href="viasurinarias.html">Vias urinárias</a></li>
                 <li><a href="Prostática.html">Prostática</a></li>
 
                 <!-- Adicione mais exames aqui -->
@@ -339,28 +443,31 @@ h2 {
         <section id="locais">
             <div style="display: flex; flex-wrap: wrap; justify-content: center;">
                 <div style="width: 200px; margin: 10px;">
-                    <img src="complexo.jpg" alt="Local 1" style="width: 200px; height: 200px; object-fit: cover; border-radius: 4px;">
-                    <p>R. Ubaldino Souto Maior, 1335 - Fatima II, Crateús - CE, 63700-000</p>
+                    <img src="complexo.jpg" alt="Local 1" style="width: 200px; height: 200px; object-fit: cover; border-radius: 25px;">
+                    <p><a href="https://goo.gl/maps/qHScaT3iRg95kn8w7" target="_blank">R. Ubaldino Souto Maior, 1335 - Fatima II, <strong>Crateús - CE</strong></p></a>
+
                 </div>
                 <div style="width: 200px; margin: 10px;">
-                    <img src="labrom.jpg" alt="Local 2" style="width: 200px; height: 200px; object-fit: cover; border-radius: 4px;">
-                    <p>R. Dona Joana, S/N, Novo Oriente - CE, Ao Lado da secretaria de assistencia social</p>
+                    <img src="labrom.jpg" alt="Local 2" style="width: 200px; height: 200px; object-fit: cover; border-radius: 25px;">
+                    <a href="https://goo.gl/maps/1hVP9tWiUhpKtmpS7" target="_blank">
+                        <p>R. Dona Joana, S/N, <strong>Novo Oriente - CE</strong>, Ao Lado da secretaria de assistencia social</p>
+                    </a>
                 </div>
                 <div style="width: 200px; margin: 10px;">
-                    <img src="alfa.jpg" alt="Local 3" style="width: 200px; height: 200px; object-fit: cover; border-radius: 4px;">
-                    <p>R. Chico Inácio número, 20, Tamboril - CE</p>
+                    <img src="alfa.jpg" alt="Local 3" style="width: 200px; height: 200px; object-fit: cover; border-radius: 25px;">
+                    <p><a href="https://goo.gl/maps/rYtLkeTH34J2Yk9t6" target="_blank">R. Chico Inácio número, 20, <strong>Tamboril - CE</strong></p></a>
                 </div>
                 <div style="width: 200px; margin: 10px;">
-                    <img src="poliipueiras.jpg" alt="Local 4" style="width: 200px; height: 200px; object-fit: cover; border-radius: 4px;">
-                    <p>Tv. Monsenhor Dantas, 2-136 - Ipueiras, CE, 62230-000</p>
+                    <img src="poliipueiras.jpg" alt="Local 4" style="width: 200px; height: 200px; object-fit: cover; border-radius: 25px;">
+                    <p>Tv. Monsenhor Dantas, 2-136 - <strong>Ipueiras, CE,</strong> 62230-000</p>
                 </div>
                 <div style="width: 200px; margin: 10px;">
-                    <img src="ipaporanga.jpg" alt="Local 5" style="width: 200px; height: 200px; object-fit: cover; border-radius: 4px;">
-                    <p>Antonio Alves Sobrinho, S/N - central - Ipaporanga - CE</p>
+                    <img src="ipaporanga.jpg" alt="Local 5" style="width: 200px; height: 200px; object-fit: cover; border-radius: 25px;">
+                    <p>Antonio Alves Sobrinho, S/N - central - <strong>Ipaporanga - CE</strong></p>
                 </div>
                 <div style="width: 200px; margin: 10px;">
-                    <img src="sao-camilo.jpg" alt="Local 6" style="width: 200px; height: 200px; object-fit: cover; border-radius: 4px;">
-                    <p>R. Padre Macedo, 306 - São José, Crateús - CE, 63700-000</p>
+                    <img src="sao-camilo.jpg" alt="Local 6" style="width: 200px; height: 200px; object-fit: cover; border-radius: 25px;">
+                    <p>R. Padre Macedo, 306 - São José, <strong>Crateús - CE</strong>, 63700-000</p>
                 </div>
             </div>
           </section>
