@@ -365,6 +365,15 @@ h2 {
             }
         }
     </style><!-- Adicione seus arquivos CSS e JavaScript aqui -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+        if (screenWidth <= 768) { // Ajuste o valor de acordo com o limite desejado
+            alert("O site será melhor visualizado em computadores ou notbooks"); // Substitua "Mensagem do popup" pela mensagem que deseja exibir
+        }
+    });
+</script>
    <script>
     window.addEventListener("DOMContentLoaded", function() {
         var banner = document.getElementById("galfade88");
