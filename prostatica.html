@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dr. Pierre Paiva oferece serviços de ultrassonografia de alta qualidade, realizados por uma equipe de profissionais especializados e com equipamentos de última geração.">
+    <meta name="keywords" content="Ultrassonografia, Ultrassom, Dr. Pierre Paiva, Saúde,ultrassom crateús, Crateús, Diagnóstico por imagem">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Ultrassom Abdominal Total - Indicações e Informações</title>
+    <style>
+        /* Reset de margens e espaçamento */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(134, 134, 189) 35%, rgba(81,158,174,1) 100%);
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Estilos para o cabeçalho */
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        /* Estilos para títulos */
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para parágrafos e listas */
+        p, ul {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        /* Estilos para seções */
+        section {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ultrassom Prostática/h1>
+    </header>
+    <main>
+        <section>
+            <h2>O que é o exame de ultrassom de próstata?</h2>
+            <p>O exame de ultrassom de próstata é um procedimento não invasivo que utiliza ondas sonoras de alta frequência para criar imagens detalhadas da glândula prostática. Este método é seguro, indolor e amplamente utilizado para avaliar e monitorar diversas condições médicas relacionadas à próstata, uma glândula do sistema reprodutor masculino localizada abaixo da bexiga.</p>
+        </section>
+        <section>
+            <section>
+                <h2>Objetivos do exame</h2>
+                <p>O ultrassom de próstata tem como principais objetivos:</p>
+                <ul>
+                    <li><h3>Avaliar a anatomia prostática</h3>
+                        <p>Para identificar possíveis alterações na estrutura da próstata, como aumento de tamanho (hiperplasia prostática benigna), malformações congênitas ou cistos prostáticos.</p>
+                    </li>
+                    <li><h3>Diagnosticar e monitorar doenças prostáticas</h3>
+                        <p>Para avaliar e acompanhar doenças da próstata, como prostatite (inflamação da próstata) e hiperplasia prostática benigna (aumento benigno da próstata).</p>
+                    </li>
+                    <li><h3>Identificar tumores ou câncer de próstata</h3>
+                        <p>Para detectar massas suspeitas na próstata e orientar a necessidade de biópsia e tratamento. O ultrassom pode ser usado em conjunto com outros exames, como o exame de sangue PSA (antígeno prostático específico).</p>
+                    </li>
+                    <li><h3>Avaliar a função da próstata e bexiga</h3>
+                        <p>Para analisar o esvaziamento da bexiga, identificar possíveis obstruções, alterações na parede da bexiga ou massas relacionadas à próstata.</p>
+                    </li>
+                    <li><h3>Orientar procedimentos médicos</h3>
+                        <p>Para guiar procedimentos médicos, como biópsias prostáticas, drenagem de abscessos prostáticos ou implante de stents uretrais.</p>
+                    </li>
+                    <li><h3>Monitorar tratamentos</h3>
+                        <p>Para acompanhar a resposta ao tratamento de doenças prostáticas e orientar possíveis ajustes terapêuticos.</p>
+                    </li>
+                </ul>
+        
+            
+        </section>
+        
+        <section>
+            <h2>Realização do exame</h2>
+
+            <section>
+                <h2>Agende seu exame</h2>
+                <button id="agendarExame" style="background-color: green; color: white; padding: 10px 20px; cursor: pointer;">Agendar exame</button>
+                <div id="agendarForm" style="display: none;">
+                    <form>
+                        <label for="nome">Nome completo:</label>
+                        <input type="text" id="nome" name="nome" required><br><br>
+                        <label for="tipoExame">Tipo de exame:</label>
+                        <input type="text" id="tipoExame" name="tipoExame" required><br><br>
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" id="telefone" name="telefone" required><br><br>
+                        <button type="submit" id="enviar" style="background-color: green; color: white; padding: 10px 20px; cursor: pointer;">Enviar</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <script>
+            $(document).ready(function() {
+                $("#agendarExame").click(function() {
+                    $("#agendarForm").toggle();
+                });
+    
+                $("#telefone").mask("(00) 00000-0000");
+    
+                $("form").submit(function(event) {
+                    event.preventDefault();
+                    var nome = $("#nome").val();
+                    var tipoExame = $("#tipoExame").val();
+                    var telefone = $("#telefone").val();
+                    var mensagem = "Nome: " + nome + "%0A" + "Tipo de exame: " + tipoExame + "%0A" + "Telefone: " + telefone;
+                    var url = "https://wa.me/558532355951?text=" + encodeURIComponent(mensagem);
+                    window.open(url, '_blank');
+                });
+            });
+        </script>
+    </body>
+    </html>
+            
+    
