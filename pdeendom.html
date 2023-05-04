@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilos para o botão e submenu */
+.btn-agendar {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submenu {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.submenu input[type="text"], .submenu input[type="tel"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submenu input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+        /* Reset de margens e espaçamento */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Estilos para o cabeçalho */
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        /* Estilos para títulos */
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para parágrafos e listas */
+        p, ul {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        /* Estilos para seções */
+        section {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(134, 134, 189) 35%, rgba(81,158,174,1) 100%);
+            color: #333;
+            padding: 20px;
+        }
+
+
+        /* Responsividade para dispositivos móveis */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            section {
+                padding: 15px;
+            }
+        }
+    </style>
+<header>
+    <h1>Ultrassom para Pesquisa de Endometriose</h1>
+</header>
+<main>
+    <section>
+        <h2>O que é o exame de ultrassom para pesquisa de endometriose?</h2>
+        <p>O exame de ultrassom para pesquisa de endometriose é um procedimento não invasivo que utiliza ondas sonoras de alta frequência para criar imagens detalhadas do útero, ovários e outras estruturas pélvicas. Este método é seguro, indolor e amplamente utilizado para diagnosticar e monitorar a endometriose, uma condição médica em que o tecido endometrial, que normalmente reveste o útero, cresce fora dele, causando dor pélvica e outros sintomas.</p>
+    </section>
+
+    <section>
+        <h2>Objetivos do exame</h2>
+        <p>O ultrassom para pesquisa de endometriose tem como principais objetivos:</p>
+        <ul>
+            <li><h3>Diagnosticar a endometriose</h3>
+                <p>Para identificar a presença de tecido endometrial fora do útero e avaliar a extensão da doença.</p>
+            </li>
+            <li><h3>Avaliar a anatomia pélvica</h3>
+                <p>Para verificar possíveis alterações na estrutura do útero, ovários, trompas de Falópio e outros órgãos pélvicos relacionadas à endometriose.</p>
+            </li>
+            <li><h3>Identificar lesões endometrióticas</h3>
+                <p>Para detectar lesões endometrióticas, como endometriomas (cistos endometrióticos) nos ovários, focos de endometriose profunda infiltrativa e aderências pélvicas.</p>
+            </li>
+            <li><h3>Monitorar o tratamento da endometriose</h3>
+                <p>Para acompanhar a resposta ao tratamento hormonal, cirúrgico ou outros tipos de terapia, e avaliar a evolução da doença ao longo do tempo.</p>
+            </li>
+            <li><h3>Investigar a causa de dor pélvica ou infertilidade</h3>
+                <p>Para identificar se a endometriose é a causa de sintomas como dor pélvica, dismenorreia (cólicas menstruais), dispareunia (dor durante o ato sexual) ou dificuldade para engravidar.</p>
+            </li>
+            <li><h3>Orientar procedimentos médicos</h3>
+                <p>Para guiar procedimentos médicos, como a laparoscopia, que pode ser usada para tratar lesões endometrióticas ou melhorar a fertilidade.</p>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Links com mais informações</h2>
+        <p>Para saber mais sobre a endometriose e o exame de ultrassom, consulte os seguintes recursos:</p>
+        <ul>
+            <li><a href="https://pt.wikipedia.org/wiki/Endometriose" target="_blank">Saiba mais sobre o assunto clicando aqui!</a>
