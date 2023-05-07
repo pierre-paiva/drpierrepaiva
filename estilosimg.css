@@ -1,0 +1,158 @@
+
+
+
+.submenu {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.submenu input[type="text"], .submenu input[type="tel"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submenu input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+        /* Reset de margens e espaçamento */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Estilos para o cabeçalho */
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        /* Estilos para títulos */
+        h1 {
+            color: #eee1e1;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: white;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para parágrafos e listas */
+        p, ul {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        /* Estilos para seções */
+        section {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(134, 134, 189) 35%, rgba(81,158,174,1) 100%);
+            color: #333;
+            padding: 20px;
+        }
+
+
+        /* Responsividade para dispositivos móveis */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            section {
+                padding: 15px;
+            }
+        }
+
+
+
+
+.imagem-container {
+    display: inline-block;
+    position: relative;
+    margin: 5px;
+  }
+  
+  .imagem {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .imagem:hover {
+    transform: scale(1.5);
+  }
+  
+  .descricao {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2px 5px;
+    width: 100%;
+    font-size: 0.8rem;
+    display: none;
+  }
+  
+  .imagem-container:hover .descricao {
+    display: block;
+  }
+  
