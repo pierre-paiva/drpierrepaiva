@@ -12,43 +12,46 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta name="robots" content="index, follow" />
     <meta name="description" content="Dr. Pierre Paiva é um médico ultrassonografista especializado em exames de ultrassom.">
-    <meta name="keywords" content="ultrassonografia, ultrassom, médico, Dr. Pierre Paiva, ultrassonografia em Crateús-CE, ultrassom Crateús-CE, Crateús-CE">
+    <meta name="keywords" content="ultrassonografia, aluguel de ultrassom, vendas de sondas, trasndutores, sondas, aluguel, ultrassom, médico, Dr. Pierre Paiva, ultrassonografia em Crateús-CE, ultrassom Crateús-CE, Crateús-CE">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styler.css">
     <title>Dr. Pierre Paiva - Médico Ultrassonografista</title>
     <meta name='robots' content='max-image-preview:large'/>
-  
+   
     <style>
-    /* Estilização de anuncios */
-    .product-container {
-        background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(215, 215, 215) 35%, rgba(81,158,174,1) 100%);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .product {
-        background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(215, 215, 215) 35%, rgba(81,158,174,1) 100%);
-        width: 30%;
-        margin: 10px;
-        box-sizing: border-box;
-    }
-
-    .whatsapp-button {
-        /* Estilize o botão de WhatsApp aqui */
-    }
-
-    /* Estilos responsivos para dispositivos móveis */
-    @media screen and (max-width: 768px) {
+   
+        /* Estilização de anuncios */
         .product-container {
-            flex-direction: column;
-            align-items: center;
+            background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(215, 215, 215) 35%, rgba(81,158,174,1) 100%);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    
+        .product {
+            background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(215, 215, 215) 35%, rgba(81,158,174,1) 100%);
+            width: 30%;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+    
+        .whatsapp-button {
+            /* Estilize o botão de WhatsApp aqui */
+        }
+    
+        /* Estilos responsivos para dispositivos móveis */
+        @media screen and (max-width: 768px) {
+            .product-container {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .product {
+                width: 90%;
+            }
         }
 
-        .product {
-            width: 90%;
-        }
-    }
+    
 
 
     /* Estilização da lista de exames */
@@ -108,20 +111,6 @@
     animation: banner-animation 10s linear infinite;
 }
 
-@keyframes banner-animation {
-    0% {
-        left: -100%;
-    }
-    10% {
-        left: 0;
-    }
-    90% {
-        left: 0;
-    }
-    100% {
-        left: 100%;
-    }
-}
 
 
 .banner p {
@@ -371,6 +360,11 @@
 #agendamento h2 {
     background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(134, 134, 189) 35%, rgba(81,158,174,1) 100%); /* Altere para a cor desejada */
 }
+#banco h2 {
+    font-size: 30px;
+    background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(134, 134, 189) 35%, rgba(81,158,174,1) 100%); 
+}
+
 #ANUNCIOS h3 {
     font-size: 30px;
     background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(134, 134, 189) 35%, rgba(81,158,174,1) 100%); /* Altere para a cor desejada */
@@ -626,7 +620,7 @@ window.onload = function() {
 <body>
     <!-- Início do banner -->
 <div class="banner">
-    <div class="banner-content">
+     <div class="banner-content">
         <p>Aparelhos para venda ou aluguel no fim do site!</p>
     </div>
 </div>
@@ -674,6 +668,8 @@ window.onload = function() {
     </section>
     <nav>
         <ul class="menu">
+
+            <li><a href="banco-imagens.html">Banco de Imagens</a></li>
             <li><a href="#ANUNCIOS">Anúncios</a></li>
             <li><a href="#exames">Exames</a></li>
             <li><a href="#locais">Locais de Atendimento</a></li>
@@ -691,7 +687,7 @@ window.onload = function() {
                 <li><a href="tireoide.html">Tireoide</a></li>
                 <li><a href="cervical.html">cervical</a></li>
                 <li><a href="obstetrica.html">Obstétrica</a></li>
-                <li><a href="obdoppler.html">Obstétrica com Doppler</a></li>
+                <li><a href="transvaginal.html">Obstétrica com Doppler</a></li>
                 <li><a href="transvaginal.html">transvaginal</a></li>
                 <li><a href="endometriose.html">Pesq. de endomemetriose</a></li>
                 <li><a href="mamaria.html">Mamária</a></li>
@@ -699,11 +695,11 @@ window.onload = function() {
                 <li><a href="vias-urinarias.html">Vias urinárias</a></li>
                 <li><a href="prostata.html">Próstata</a></li>
                 <li><a href="bolsa-escrotal.html">Bolsa escrotal</a></li>
-                <li><a href="mamamasculina.html">Mamária masculina</a></li>
+                <li><a href="mamaria-masculina.html">Mamária masculina</a></li>
                 <li><a href="pelvica.html">Pélvica</a></li>
                 <li><a href="parede-abdominal.html">Parede abdominal</a></li>
                 <li><a href="partes-moles.html">Partes moles</a></li>
-                <li><a href="reginguinal.html">Região inguinal</a></li>
+                <li><a href="regiao-inguinal.html">Região inguinal</a></li>
                 <li><a href="doppler-cervical.html">Doppler cervical</a></li>
                 <li><a href="doppler-carotidas-vertebrais.html">Doppler carótidas e vert.</a></li>
                 <li><a href="tireoide-doppler.html">Tireoide com Doppler</a></li>
@@ -768,7 +764,8 @@ window.onload = function() {
 
 <!-- Widget de link do Calendly - fim -->
         </section>
-        
+       
+    
         
     </main>
     <!-- Início da seção de produtos -->
@@ -812,7 +809,7 @@ window.onload = function() {
                         <span class="sr-only">Próximo</span>
                     </a>
                 </div>
-                <h3>ultrassom Philips HD11xe</h3>
+                <h3>ultrassom Philips HD11ex</h3>
                 <p>Apaprelho disponível para venda ou aluguel, completo com 6 sandas incluso micro sonda de alta frequência excelente para uso dermatológico e oftalmico.</p>
                 <a href="https://wa.me/5588992766974?text=Olá,%20gostaria%20de%20alugar%20o%20produto%20NOME_DO_PRODUTO" target="_blank" class="whatsapp-button">Enviar mensagem para WhatsApp</a>
             </div>
