@@ -124,35 +124,33 @@
 
 
 
-.imagem-container {
-    display: inline-block;
-    position: relative;
-    margin: 5px;
-  }
-  
-  .imagem {
-    width: 100px;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s;
-  }
-  
-  .imagem:hover {
-    transform: scale(1.5);
-  }
-  
-  .descricao {
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 2px 5px;
-    width: 100%;
-    font-size: 0.8rem;
-    display: none;
-  }
-  
-  .imagem-container:hover .descricao {
-    display: block;
-  }
-  
+        .imagem-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-bottom: 20px;
+          }
+          
+          .imagem {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin-right: 10px;
+          }
+          
+          .imagem:hover {
+            transform: scale(1.1);
+          }
+          
+          .texto-explicativo {
+            max-width: 60%;
+          }
+          
+          .descricao {
+            font-size: 1rem;
+            line-height: 1.4;
+            text-align: justify;
+          }
+          
