@@ -19,25 +19,38 @@
     <meta name='robots' content='max-image-preview:large'/>
    
    <style>
+    <style>
     /* Estilização de anuncios */
+    .product-container {
+        background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(215, 215, 215) 35%, rgba(81,158,174,1) 100%);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
-.product-container {
-    background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(215, 215, 215) 35%, rgba(81,158,174,1) 100%);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+    .product {
+        background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(215, 215, 215) 35%, rgba(81,158,174,1) 100%);
+        width: 30%;
+        margin: 10px;
+        box-sizing: border-box;
+    }
 
-.product {
-    background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(215, 215, 215) 35%, rgba(81,158,174,1) 100%);
-    width: 30%;
-    margin: 10px;
-    box-sizing: border-box;
-}
+    .whatsapp-button {
+        /* Estilize o botão de WhatsApp aqui */
+    }
 
-.whatsapp-button {
-    /* Estilize o botão de WhatsApp aqui */
-}
+    /* Estilos responsivos para dispositivos móveis */
+    @media screen and (max-width: 768px) {
+        .product-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product {
+            width: 90%;
+        }
+    }
+</style>
 
 
     /* Estilização da lista de exames */
