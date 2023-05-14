@@ -6,12 +6,12 @@
   <title>Banco de Imagens</title>
   <link rel="stylesheet" href="estilosimg.css">
   <style> 
-  .diverticulo {
+  .imagem-lado-lado {
   display: flex;
   justify-content: space-between;
 }
 
-.diverticulo {
+.imagem-lado-lado {
   width: 200px;
   height: 120px;
   object-fit: cover; /* Isso irá manter a proporção da imagem, cortando-a se necessário */
@@ -24,32 +24,45 @@
 </head>
 <body>
     <body>
-        <h1>Banco de Imagens</h1>
-  <div class="tema" id="ginecologia">
-    <a href="bancoconteudo.html"html"></h2>
-        <h2>Ginecologia</h2>
-    </a>
-    <div class="texto-explicativo">
-        <p class="descricao">
-        <a href="bancoconteudo.html#Mola-hidatiforme">Mola Hidatiforme</a>
-        </p>
-    <div class="imagem-container">
-      <a href="mola01.jpg" target="_blank">
-        <img src="mola01.jpg" alt="Descrição da imagem" class="imagem">
-      </a>
-      <div class="imagem-container">
-        <a href="mola02.jpg" target="_blank">
-            <img src="mola02.jpg" alt="Descrição da imagem" class="imagem">
-          </a>           
-      </div>
-      
-    
+      <h1>Banco de Imagens</h1>
+      <div class="tema" id="ginecologia">
+        <h2><a href="bancoconteudo.html">Ginecologia</a></h2>
+        <div class="texto-explicativo">
+          <p class="descricao">
+            <a href="bancoconteudo.html#Mola-hidatiforme">Mola Hidatiforme</a>
+          </p>
+          <div class="imagem-container">
+            <a href="mola01.jpg" target="_blank">
+              <img src="mola01.jpg" alt="Descrição da imagem" class="imagem">
+            </a>
+            <a href="mola02.jpg" target="_blank">
+              <img src="mola02.jpg" alt="Descrição da imagem" class="imagem">
+            </a> 
+          </div>
+          <br>
+
+          <!-- Adicione as novas imagens aqui, fora da div imagem-container -->
+          <p class="descricao">
+            <a href="bancoconteudo.html#ovarios-micropolicisticos">Ovários Micropolicísticos</a>
+          </p>
+          <div class="imagem-lado-lado">
+            <a href="ovpoli.jpg" target="_blank">
+              <img src="ovpoli.jpg" alt="Descrição da nova imagem" class="imagem">
+            </a>
+            <a href="ovpoli02.jpg" target="_blank">
+              <img src="ovpoli02.jpg" alt="Descrição da nova imagem" class="imagem">
+            </a>
+          </div>
+<br>
          
+        </div>
+      </div>
   <!-- Repita para outras imagens -->
   
   <!-- Medicina Interna -->
   
         </div>
+        <br>
         <div class="tema" id="medicina-interna">
           <h2>Clínica Médica</h2>
           <div class="texto-explicativo">
@@ -81,7 +94,7 @@
               </p>
         
             
-                <div class="diverticulo">
+                <div class="imagem-lado-lado">
                   <a href="divbx.jpg" target="_blank">
                     <img src="divbx.jpg" alt="Descrição da imagem" class="imagem">
                   </a>
