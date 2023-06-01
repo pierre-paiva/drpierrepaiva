@@ -60,7 +60,7 @@
         }
 
         h2 {
-            color: white;
+            color: rgb(25, 24, 24);
             font-size: 1.8em;
             margin-bottom: 15px;
         }
@@ -92,7 +92,7 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(134, 134, 189) 35%, rgba(81,158,174,1) 100%);
+            background: linear-gradient(180deg, rgba(83, 77, 200, 0.691) 0%, rgb(233, 233, 238) 35%, rgba(212, 228, 231) 100%);
             color: #333;
             padding: 20px;
         }
