@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Suporte — FinanceFlow</title>
+  <meta name="description" content="Suporte do FinanceFlow: contato e dúvidas." />
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;max-width:900px;margin:0 auto;padding:28px 16px;line-height:1.55}
+    h1{margin-top:0}
+    .muted{color:#555}
+    .card{border:1px solid #eee;border-radius:14px;padding:16px;margin:14px 0}
+    a{color:#0b5fff;text-decoration:none}
+    a:hover{text-decoration:underline}
+    code{background:#f2f2f2;padding:2px 6px;border-radius:6px}
+    .btn{display:inline-block;background:#ff6a2b;color:#120a04;padding:10px 14px;border-radius:10px;font-weight:700}
+  </style>
+</head>
+<body>
+  <h1>Suporte — FinanceFlow</h1>
+  <p class="muted">Última atualização: <span id="date"></span></p>
+
+  <div class="card">
+    <h2>📩 Contato</h2>
+    <p>E-mail de suporte: <a href="mailto:pierrepaiva@hotmail.com?subject=Suporte%20FinanceFlow">pierrepaiva@hotmail.com</a></p>
+    <p>
+      <a class="btn" href="mailto:pierrepaiva@hotmail.com?subject=Suporte%20FinanceFlow&body=Modelo%20de%20suporte%3A%0A%0A1)%20O%20que%20você%20tentou%20fazer%3F%0A2)%20O%20que%20aconteceu%3F%0A3)%20Passo%20a%20passo%20para%20reproduzir%3A%0A4)%20iPhone%20modelo%20e%20iOS%3A%0A5)%20Versão%20do%20app%20(TestFlight)%3A%0A6)%20Print%20ou%20vídeo%3A">Abrir e-mail com modelo</a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>🛠️ Problemas comuns</h2>
+    <ul>
+      <li><b>Não aparece algo na tela:</b> feche e abra o app; atualize o TestFlight.</li>
+      <li><b>Erro ao salvar:</b> confira campos obrigatórios (categoria, conta, valor).</li>
+      <li><b>Totais não batem:</b> revise filtros (mês/tipo) e status (pago/pendente/atrasado).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🔒 Privacidade</h2>
+    <p>Política de Privacidade: <a href="privacy.html">privacy.html</a></p>
+  </div>
+
+  <script>
+    document.getElementById('date').textContent = new Date().toLocaleDateString('pt-BR');
+  </script>
+</body>
+</html>
