@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Suporte — FinanceFlow</title>
+  <meta name="description" content="Página de suporte do aplicativo FinanceFlow." />
+  <style>
+    :root{
+      --bg:#0b0f19;
+      --card:#111827;
+      --text:#e5e7eb;
+      --muted:#a1a1aa;
+      --line:#243043;
+      --accent:#ff6b2c;
+    }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(255,107,44,.18), transparent 60%),
+                  radial-gradient(1000px 500px at 80% 10%, rgba(99,102,241,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    .wrap{max-width:900px;margin:40px auto;padding:0 18px;}
+    .top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap}
+    h1{margin:0 0 6px;font-size:30px;letter-spacing:.2px}
+    .subtitle{margin:0;color:var(--muted)}
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border:1px solid var(--line);border-radius:999px;
+      background:rgba(17,24,39,.7);color:var(--muted);font-size:13px
+    }
+    .grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:18px}
+    @media(min-width:820px){.grid{grid-template-columns:1fr 1fr}}
+    .card{
+      border:1px solid var(--line);
+      background:rgba(17,24,39,.78);
+      border-radius:16px;
+      padding:16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .card h2{margin:0 0 10px;font-size:16px}
+    .row{display:flex;gap:10px;align-items:flex-start;margin:10px 0}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:6px;flex:0 0 10px}
+    a{color:#9dd7ff;text-decoration:none}
+    a:hover{text-decoration:underline}
+    code{
+      background:rgba(0,0,0,.25);
+      border:1px solid var(--line);
+      padding:2px 6px;border-radius:8px;color:#fff
+    }
+    .footer{margin:24px 0 8px;color:var(--muted);font-size:13px}
+    .btn{
+      display:inline-block;
+      padding:10px 14px;border-radius:12px;
+      border:1px solid rgba(255,107,44,.45);
+      background:rgba(255,107,44,.12);
+      color:var(--text);
+      margin-top:6px;
+    }
+    .btn:hover{background:rgba(255,107,44,.18)}
+    .small{font-size:13px;color:var(--muted);margin-top:6px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h1>Suporte — FinanceFlow</h1>
+        <p class="subtitle">Ajuda, contato e informações de privacidade do aplicativo FinanceFlow.</p>
+      </div>
+      <div class="badge">📱 iOS • FinanceFlow</div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>📩 Contato</h2>
+
+        <div class="row">
+          <span class="dot"></span>
+          <div>
+            <div><b>E-mail:</b> <a href="mailto:pierrepaiva@hotmail.com?subject=Suporte%20FinanceFlow">pierrepaiva@hotmail.com</a></div>
+            <div class="small">Assunto sugerido: <code>Suporte FinanceFlow</code></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <span class="dot"></span>
+          <div>
+            <div><b>O que enviar no e-mail:</b></div>
+            <div class="small">
+              Modelo do aparelho (ex: iPhone 13), iOS (ex: 17.2), e print do erro (se tiver).
+            </div>
+          </div>
+        </div>
+
+        <a class="btn" href="mailto:pierrepaiva@hotmail.com?subject=Suporte%20FinanceFlow">Enviar e-mail</a>
+      </div>
+
+      <div class="card">
+        <h2>🔒 Privacidade</h2>
+
+        <div class="row">
+          <span class="dot"></span>
+          <div>
+            <div><b>Sem login/cadastro:</b> o FinanceFlow não possui autenticação.</div>
+            <div class="small">O app funciona sem conta e sem criação de perfil.</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <span class="dot"></span>
+          <div>
+            <div><b>Dados locais:</b> as informações são armazenadas no dispositivo do usuário.</div>
+            <div class="small">O app é voltado para organização financeira pessoal.</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <span class="dot"></span>
+          <div>
+            <div><b>Compartilhamento:</b> não há compartilhamento de dados pessoais com terceiros.</div>
+            <div class="small">Caso isso mude no futuro, esta página será atualizada.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>🧪 TestFlight (o que testar)</h2>
+
+        <div class="row">
+          <span class="dot"></span>
+          <div>
+            <div>Adicionar movimentações (despesas/receitas), categorias, contas e parcelas.</div>
+            <div class="small">Validar seleção de conta, datas e recorrência.</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <span class="dot"></span>
+          <div>
+            <div>Relatar qualquer travamento/erro com print.</div>
+            <div class="small">Envie junto o que você estava fazendo no momento do erro.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>ℹ️ Informações</h2>
+
+        <div class="row">
+          <span class="dot"></span>
+          <div>
+            <div><b>Desenvolvedor:</b> Pierre Paiva</div>
+            <div class="small">© <span id="y"></span> — FinanceFlow</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <span class="dot"></span>
+          <div>
+            <div>Esta página é o canal oficial de suporte do FinanceFlow.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Última atualização: <span id="d"></span>
+    </div>
+  </div>
+
+  <script>
+    const now = new Date();
+    document.getElementById('y').textContent = now.getFullYear();
+    document.getElementById('d').textContent = now.toLocaleDateString('pt-BR');
+  </script>
+</body>
+</html>
