@@ -326,6 +326,113 @@
             color: #666;
             font-size: 14px;
             line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .service-btn {
+            background: var(--accent-blue);
+            color: var(--light-text);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .service-btn:hover {
+            background: var(--secondary-blue);
+            transform: scale(1.05);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: var(--light-text);
+            margin: 5% auto;
+            padding: 30px;
+            border: 1px solid #888;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--gradient-primary);
+            padding-bottom: 15px;
+        }
+
+        .modal-header h2 {
+            color: var(--primary-blue);
+            font-size: 24px;
+        }
+
+        .close-btn {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            color: var(--primary-blue);
+        }
+
+        .modal-body {
+            color: var(--dark-text);
+            line-height: 1.8;
+        }
+
+        .modal-body h3 {
+            color: var(--secondary-blue);
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .modal-body ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .modal-body li {
+            margin-bottom: 8px;
+            color: #555;
         }
 
         /* Seção Local de Atendimento */
@@ -597,36 +704,43 @@
                     <div class="service-icon">🔍</div>
                     <h3>Ultrassom Abdominal</h3>
                     <p>Avaliação completa dos órgãos abdominais com tecnologia de alta resolução.</p>
+                    <button class="service-btn" onclick="openModal('modal1')">Ver Orientações</button>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">👶</div>
                     <h3>Ultrassom Obstétrico</h3>
                     <p>Acompanhamento gestacional com segurança e precisão diagnóstica.</p>
+                    <button class="service-btn" onclick="openModal('modal2')">Ver Orientações</button>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🩺</div>
                     <h3>Ultrassom Ginecológico</h3>
                     <p>Avaliação completa do sistema reprodutivo feminino.</p>
+                    <button class="service-btn" onclick="openModal('modal3')">Ver Orientações</button>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">❤️</div>
                     <h3>Doppler Vascular</h3>
                     <p>Avaliação do fluxo sanguíneo em artérias e veias.</p>
+                    <button class="service-btn" onclick="openModal('modal4')">Ver Orientações</button>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🦴</div>
                     <h3>Ultrassom Musculoesquelético</h3>
                     <p>Análise de músculos, tendões e articulações.</p>
+                    <button class="service-btn" onclick="openModal('modal5')">Ver Orientações</button>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔬</div>
                     <h3>Ultrassom Tireoidiano</h3>
                     <p>Avaliação da glândula tireóide com precisão diagnóstica.</p>
+                    <button class="service-btn" onclick="openModal('modal6')">Ver Orientações</button>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">💓</div>
                     <h3>Ecocardiograma Fetal</h3>
                     <p>Avaliação do coração do feto durante a gestação com tecnologia avançada.</p>
+                    <button class="service-btn" onclick="openModal('modal7')">Ver Orientações</button>
                 </div>
             </div>
         </div>
@@ -716,6 +830,184 @@
                 }
             });
         });
+
+        // Modal functions
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Fechar modal ao clicar fora dele
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
     </script>
+
+    <!-- Modais de Orientacoes -->
+    <!-- Modal 1: Ultrassom Abdominal -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Orientacoes - Ultrassom Abdominal</h2>
+                <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h3>Preparacao Necessaria:</h3>
+                <ul>
+                    <li>Jejum de 6 a 8 horas antes do exame</li>
+                    <li>Bexiga cheia (beba agua 1 hora antes)</li>
+                    <li>Roupas confortaveis e faceis de remover</li>
+                    <li>Remova joias e adornos metalicos</li>
+                </ul>
+                <h3>Duracao:</h3>
+                <p>Aproximadamente 20 a 30 minutos</p>
+                <h3>Observacoes:</h3>
+                <p>O exame e indolor e nao invasivo. Voce recebera um gel na pele para melhor conducao das ondas sonoras.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Ultrassom Obstetrico -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Orientacoes - Ultrassom Obstetrico</h2>
+                <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h3>Preparacao Necessaria:</h3>
+                <ul>
+                    <li>Bexiga cheia (beba agua 1 hora antes)</li>
+                    <li>Roupas confortaveis e faceis de remover</li>
+                    <li>Trazer ultrassons anteriores, se houver</li>
+                    <li>Trazer cartao de pre-natal</li>
+                </ul>
+                <h3>Duracao:</h3>
+                <p>Aproximadamente 20 a 40 minutos</p>
+                <h3>Observacoes:</h3>
+                <p>Exame seguro para mae e bebe. Pode haver incomodo leve pela pressao da sonda.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Ultrassom Ginecologico -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Orientacoes - Ultrassom Ginecologico</h2>
+                <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h3>Preparacao Necessaria:</h3>
+                <ul>
+                    <li>Bexiga cheia (beba agua 1 hora antes)</li>
+                    <li>Roupas confortaveis e faceis de remover</li>
+                    <li>Higiene pessoal adequada</li>
+                    <li>Evitar relacoes sexuais 24h antes</li>
+                </ul>
+                <h3>Duracao:</h3>
+                <p>Aproximadamente 15 a 20 minutos</p>
+                <h3>Observacoes:</h3>
+                <p>Exame pode ser realizado por via transabdominal ou transvaginal, conforme necessario.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Doppler Vascular -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Orientacoes - Doppler Vascular</h2>
+                <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h3>Preparacao Necessaria:</h3>
+                <ul>
+                    <li>Sem jejum obrigatorio</li>
+                    <li>Roupas confortaveis e faceis de remover</li>
+                    <li>Evitar fumar 2 horas antes</li>
+                    <li>Trazer exames anteriores, se houver</li>
+                </ul>
+                <h3>Duracao:</h3>
+                <p>Aproximadamente 30 a 45 minutos</p>
+                <h3>Observacoes:</h3>
+                <p>Exame avalia o fluxo sanguineo. Voce ouvi ra sons durante o procedimento.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Ultrassom Musculoesqueletico -->
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Orientacoes - Ultrassom Musculoesqueletico</h2>
+                <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h3>Preparacao Necessaria:</h3>
+                <ul>
+                    <li>Sem jejum obrigatorio</li>
+                    <li>Roupas confortaveis que permitam acesso a area</li>
+                    <li>Trazer exames anteriores (RX, ressonancia)</li>
+                    <li>Informar medicacoes em uso</li>
+                </ul>
+                <h3>Duracao:</h3>
+                <p>Aproximadamente 15 a 30 minutos</p>
+                <h3>Observacoes:</h3>
+                <p>Exame avalia musculos, tendoes e articulacoes. Pode haver incomodo ao pressionar areas dolorosas.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6: Ultrassom Tireoidiano -->
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Orientacoes - Ultrassom Tireoidiano</h2>
+                <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h3>Preparacao Necessaria:</h3>
+                <ul>
+                    <li>Sem jejum obrigatorio</li>
+                    <li>Roupas confortaveis com acesso ao pescoco</li>
+                    <li>Trazer exames anteriores, se houver</li>
+                    <li>Trazer resultados de TSH recentes</li>
+                </ul>
+                <h3>Duracao:</h3>
+                <p>Aproximadamente 15 a 20 minutos</p>
+                <h3>Observacoes:</h3>
+                <p>Exame simples e indolor. Voce sera posicionado com o pescoco ligeiramente estendido.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 7: Ecocardiograma Fetal -->
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Orientacoes - Ecocardiograma Fetal</h2>
+                <span class="close-btn" onclick="closeModal('modal7')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h3>Preparacao Necessaria:</h3>
+                <ul>
+                    <li>Bexiga cheia (beba agua 1 hora antes)</li>
+                    <li>Roupas confortaveis e faceis de remover</li>
+                    <li>Trazer ultrassons obstetricos anteriores</li>
+                    <li>Trazer cartao de pre-natal</li>
+                </ul>
+                <h3>Duracao:</h3>
+                <p>Aproximadamente 30 a 45 minutos</p>
+                <h3>Observacoes:</h3>
+                <p>Exame especializado que avalia o coracao do feto. Seguro para mae e bebe.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
