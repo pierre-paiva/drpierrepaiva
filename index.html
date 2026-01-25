@@ -1,778 +1,718 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <meta name="robots" content="index, follow" />
-    <meta name="description" content="Dr. Pierre Paiva é um médico ultrassonografista especializado em exames de ultrassom.">
-    <meta name="keywords" content="ultrassonografia, aluguel de ultrassom, vendas de sondas, trasndutores, sondas, aluguel, ultrassom, médico, Dr. Pierre Paiva, ultrassonografia em Crateús-CE, ultrassom Crateús-CE, Crateús-CE">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styler.css">
+    <meta name="description" content="Dr. Pierre Paiva - Médico Ultrassonografista especializado em exames de ultrassom de alta qualidade.">
+    <meta name="keywords" content="ultrassonografia, ultrassom, médico, Dr. Pierre Paiva, Crateús, CE, RQE 15343">
     <title>Dr. Pierre Paiva - Médico Ultrassonografista</title>
-    <meta name='robots' content='max-image-preview:large'/>
-   
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <style>
-   
-        /* Estilização de anuncios */
-        .product-container {
-            background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(215, 215, 215) 35%, rgba(81,158,174,1) 100%);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-    
-        .product {
-            background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(215, 215, 215) 35%, rgba(81,158,174,1) 100%);
-            width: 30%;
-            margin: 10px;
-            box-sizing: border-box;
-        }
-    
-        .whatsapp-button {
-            /* Estilize o botão de WhatsApp aqui */
-        }
-    
-        /* Estilos responsivos para dispositivos móveis */
-        @media screen and (max-width: 768px) {
-            .product-container {
-                flex-direction: column;
-                align-items: center;
-            }
-    
-            .product {
-                width: 90%;
-            }
-        }
-
-    
-
-
-    /* Estilização da lista de exames */
-#exames .exames-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0;
-}
-
-#exames .exames-list li {
-    list-style: none;
-    width: calc(20% - -3px);
-}
-
-#exames .exames-list li a {
-    display: block;
-    text-decoration: none;
-    color: #000;
-    padding: 5px 10px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-/* Responsividade para tablets */
-@media (max-width: 768px) {
-    #exames .exames-list li {
-        width: calc(33.333% - 10px);
-    }
-}
-
-/* Responsividade para dispositivos móveis */
-@media (max-width: 480px) {
-    #exames .exames-list li {
-        width: calc(50% - 10px);
-    }
-}
-
-    /* Estilos do banner */
-  
-  
-.banner li img {
-    width: 100%;
-    height: 280px; /* Altere este valor para ajustar a altura das imagens */
-    object-fit: contain; /* Isto fará com que a imagem cubra todo o espaço disponível, cortando a imagem se necessário */
-}
-
-
-
-.banner-content {
-    
-    position: absolute;
-    left: -100%;
-    width: 87%;
-    height: 704px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: banner-animation 10s linear infinite;
-}
-
-
-
-.banner p {
-    
-    margin: 0;
-    padding: 0;
-    color: #69e907;
-    font-size: 25px;
-}
-
-/* Estilos da seção de produtos */
-.product-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    background-color: #f8f8f8;
-}
-
-.product {
-    flex: 0 1 calc(33.333% - 40px);
-    margin: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-    text-align: center;
-}
-
-.product img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.whatsapp-button {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #ffffff;
-    background-color: #25d366;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.whatsapp-button:hover {
-    background-color: #1bbd51;
-}
-
-    /* Estilos do modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 400px;
-    border-radius: 5px;
-}
-
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-/* fim do modal */
-.menu {
-        display: flex;
-        justify-content: space-around;
-        list-style-type: none;
-        border-radius: 20px;
-    }
-
-    .menu li {
-        position: relative;
-        background-color: #82a0aa; /* Altere para a cor de fundo desejada */
-        border-radius: 5px;
-        padding: 10px 0;
-        text-align: center;
-        width: 30%;
-        border-radius: 27px;
-    }
-
-    .menu a {
-        display: block;
-        padding: 10px;
-        text-decoration: none;
-    }
-
-    .menu li:hover {
-        background-color: #ccc; /* Altere para a cor de fundo desejada ao passar o mouse */
-    }
-
-    /* Responsividade para dispositivos móveis */
-    @media screen and (max-width: 768px) {
-        .menu {
-            flex-direction: column;
-        }
-
-        .menu li {
-            width: 100%;
-            margin-bottom: 10px;
-        }
-    }
-    /* Ajustes do Banner */
-         .banner-container {
-            display: flex;
-            justify-content: center;
-        }
-
-        .banner {
-            border-radius: 50px;
-           position: static;
-           width: 940px;
-           height: 300px;
-           overflow: hidden;
-       }
-
-       .banner li {
-           position: absolute;
-           top: 0;
-           left: 0;
-           width: 100%;
-           height: 100%;
-           opacity: 0;
-           transition: opacity 1s;
-       }
-
-       .banner li.active {
-           opacity: 1;
-       }
-       /* icones das redes sociais */
-       .face-icon {
-    position: absolute;
-    top: 13px;
-    left: 49px;
-    width: 33px;
-    height: 33px;
-    z-index: 10;
-}
-    
-    .insta-icon {
-    position: absolute;
-    top: 13px;
-    left: 100%;
-    width: 33px;
-    height: 33px;
-    z-index: 10;
-}
-.face-icon {
-    position: absolute;
-    top: 13px;
-    left: 95%x;
-    width: 33px;
-    height: 33px;
-    z-index: 10;
-}
-
-.insta-icon {
-    position: absolute;
-    top: 13px;
-    left: 90%;
-    width: 33px;
-    height: 33px;
-    z-index: 10;
-}
-
-@media screen and (max-width: 768px) {
-    .face-icon, .insta-icon {
-        width: 25px;
-        height: 25px;
-    }
-}
-
-
-
-
-/* Estilos para a seção "sobre" */
-#sobre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-
-
-.foto {
-    width: 100%;
-    max-width: 200px; /* Ajuste o tamanho máximo da foto aqui */
-    border-radius: 50%;
-}
-
-.descricao {
-    flex: 2;
-    padding-left: 20px;
-}
-
-@media screen and (max-width: 768px) {
-    #sobre {
-        flex-direction: column;
-    }
-
-    .descricao {
-        padding-left: 0;
-        padding-top: 20px;
-    }
-}
-
-.agendamento-link {
-    display: inline-block;
-    padding: 10px 20px; /* Ajuste o preenchimento para alterar o tamanho do retângulo */
-    background-color: rgb(192, 179, 179); /* Cor do retângulo */
-    color: #0000FF; /* Cor do texto */
-    text-decoration: none; /* Remove o sublinhado do link */
-    border-radius: 5px; /* Arredonda os cantos do retângulo */
-}
-
-    /* Cor do texto dos elementos <h2> na seção "exames" */
-#tabela-precos h2 {
-    background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(134, 134, 189) 35%, rgba(81,158,174,1) 100%);
-}
-
-
-#exames h2 {
-    background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(134, 134, 189) 35%, rgba(81,158,174,1) 100%); /* Altere para a cor desejada */
-}
-
-/* Cor do texto dos elementos <h2> na seção "locais" */
-#locais h2 {
-    background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(134, 134, 189) 35%, rgba(81,158,174,1) 100%); /* Altere para a cor desejada */
-}
-
-/* Cor do texto dos elementos <h2> na seção "agendamento" */
-#tema-do-mes {
-    font-size: 30px;
-    background: linear-gradient(180deg, #FFFF00 100%, rgb(189 168 134) 35%, rgb(174 152 81) 100%);
-
-}
-#agendamento h2 {
-    background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(134, 134, 189) 35%, rgba(81,158,174,1) 100%); /* Altere para a cor desejada */
-}
-#banco h2 {
-    font-size: 30px;
-    background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(134, 134, 189) 35%, rgba(81,158,174,1) 100%); 
-}
-
-#ANUNCIOS h3 {
-    font-size: 30px;
-    background: linear-gradient(180deg, rgba(5, 1, 73, 0.691) 0%, rgb(134, 134, 189) 35%, rgba(81,158,174,1) 100%); /* Altere para a cor desejada */
-}
-
-    /* Cor do link normal na seção "exames" */
-#exames a {
-    color: #080808; /* Altere para a cor desejada */
-    text-decoration: none;
-}
-
-/* Cor do link ao passar o mouse na seção "exames" */
-#exames a:hover {
-    color: #0056B3; /* Altere para a cor desejada */
-    text-decoration: underline;
-}
-
-/* Cor do link visitado na seção "exames" */
-#exames a:visited {
-    color: #d9b058; /* Altere para a cor desejada */
-}
-
-    /* Cor do link normal */
-.menu a {
-    color: #121213; /* Altere para a cor desejada */
-    text-decoration: none;
-}
-
-/* Cor do link ao passar o mouse */
-.menu a:hover {
-    color: #0056B3; /* Altere para a cor desejada */
-    text-decoration: underline;
-}
-
-/* Cor do link visitado */
-.menu a:visited {
-    color: #43401b; /* Altere para a cor desejada */
-}
-
-    /* Cor do link normal */
-a {
-    color: #0a0a0a; /* Altere para a cor desejada */
-    text-decoration: none;
-}
-
-/* Cor do link ao passar o mouse */
-a:hover {
-    color: #0056B3; /* Altere para a cor desejada */
-    text-decoration: underline;
-}
-
-/* Cor do link visitado */
-a:visited {
-    color: #0f151a; /* Altere para a cor desejada */
-}
-
-    h1 {
-    color: #0f151a; /* Altere para a cor desejada */
-}
-
-h2 {
-    color: #0f151a; /* Altere para a cor desejada */
-}
-
-    .btn-agendar {
-    display: inline-block;
-    background-color: #927a7a;
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
-    margin: 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.submenu {
-    display: none;
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.submenu input[type="text"], .submenu input[type="tel"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.submenu input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-        /* Reset de margens e espaçamento */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Estilos para o corpo da página */
+        :root {
+            --primary-blue: #003d82;
+            --secondary-blue: #0056b3;
+            --light-blue: #e8f4f8;
+            --dark-text: #1a1a1a;
+            --light-text: #ffffff;
+            --accent-blue: #0077cc;
+            --border-color: #ddd;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
-            padding: 20px;
+            color: var(--dark-text);
+            background-color: #f5f5f5;
         }
 
-        /* Estilos para o cabeçalho */
+        /* Header e Navegação */
         header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--light-text);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-section h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-section p {
+            font-size: 14px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .rqe-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* Banner Principal */
+        .banner-section {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+        }
+
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-item {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-item.active {
+            opacity: 1;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 61, 130, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .banner-text {
             text-align: center;
-            padding-bottom: 20px;
+            color: var(--light-text);
+            z-index: 3;
+            animation: fadeInUp 0.8s ease;
         }
 
-        /* Estilos para títulos */
-        h1 {
-            font-size: 2.2em;
-            margin-bottom: -9px;
+        .banner-text h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
-        h2 {
-            font-size: 1.8em;
+        .banner-text p {
+            font-size: 20px;
+            font-weight: 300;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .carousel-controls {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .carousel-dot.active {
+            background: var(--light-text);
+            transform: scale(1.3);
+        }
+
+        /* Seção Sobre */
+        .about-section {
+            background: var(--light-blue);
+            padding: 60px 20px;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 61, 130, 0.15);
+        }
+
+        .about-content h2 {
+            font-size: 36px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
             margin-bottom: 15px;
         }
 
-        h3 {
-            font-size: 1.4em;
-            margin-bottom: 10px;
-        }
-
-        /* Estilos para parágrafos e listas */
-        p, ul {
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        /* Estilos para seções */
-        section {
-            background-color: #dfeceb;
+        .credentials {
+            background: var(--light-text);
+            padding: 20px;
+            border-left: 4px solid var(--accent-blue);
+            margin-top: 25px;
             border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        body {
-            font-family: Arial, sans-serif;
+
+        .credentials p {
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        /* Seção Serviços */
+        .services-section {
+            padding: 60px 20px;
+            background: var(--light-text);
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: var(--primary-blue);
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--light-blue);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 61, 130, 0.15);
+            border-color: var(--accent-blue);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: var(--primary-blue);
+            font-size: 20px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 14px;
             line-height: 1.6;
-            background: linear-gradient(180deg, rgba(83, 77, 200, 0.691) 0%, rgb(233, 233, 238) 35%, rgb(212, 228, 231) 100%);
-            color: #333;
+        }
+
+        /* Seção Local de Atendimento */
+        .location-section {
+            padding: 60px 20px;
+            background: var(--light-blue);
+        }
+
+        .location-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .location-content {
+            background: var(--light-text);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .location-info h3 {
+            color: var(--primary-blue);
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .location-info p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .location-address {
+            background: var(--light-blue);
             padding: 20px;
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 5px;
+            margin-top: 20px;
         }
 
-
-        /* Responsividade para dispositivos móveis */
-        @media screen and (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            h2 {
-                font-size: 1.6em;
-            }
-
-            h3 {
-                font-size: 1.2em;
-            }
-
-            section {
-                padding: 15px;
-            }
-        }
-    </style><!-- Adicione seus arquivos CSS e JavaScript aqui -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-/*
-        if (screenWidth <= 768) { // Ajuste o valor de acordo com o limite desejado
-            alert("<a href="">O site será melhor visualizado em computadores ou notebooks</a>"); // Substitua "Mensagem do popup" pela mensagem que deseja exibir
-        }*/
-        // Exibir o modal
-     /*   
-function showModal() {
-    var modal = document.getElementById("modalAviso");
-    modal.style.display = "block";
-}
-
-// Fechar o modal ao clicar no "X"
-function closeModal() {
-    var modal = document.getElementById("modalAviso");
-    modal.style.display = "none";
-}
-
-window.onload = function() {
-    // Exibir o modal assim que a página for carregada
-    showModal();
-
-    // Fechar o modal ao clicar no "X"
-    var closeButton = document.getElementsByClassName("close")[0];
-    closeButton.onclick = function() {
-        closeModal();
-    }
-
-    // Fechar o modal ao clicar fora dele
-    window.onclick = function(event) {
-        var modal = document.getElementById("modalAviso");
-        if (event.target == modal) {
-            closeModal();
-        }
-    }
-}
-*/
-    });
-</script>
-
-   <script>
-    window.addEventListener("DOMContentLoaded", function() {
-        var banner = document.getElementById("galfade88");
-        var slides = banner.getElementsByTagName("li");
-        var currentSlide = 0;
-
-        function changeSlide() {
-            slides[currentSlide].classList.remove("active");
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add("active");
+        .location-address strong {
+            color: var(--primary-blue);
+            display: block;
+            margin-bottom: 8px;
         }
 
-        setInterval(changeSlide, 3000); // Altere o valor para ajustar a velocidade de transição
-    });
-</script>
+        .location-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Seção Agendamento */
+        .scheduling-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--light-text);
+        }
+
+        .scheduling-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .scheduling-section .section-title {
+            color: var(--light-text);
+            margin-bottom: 30px;
+        }
+
+        .scheduling-content {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .scheduling-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: var(--light-text);
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-blue);
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: var(--light-text);
+            color: var(--primary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-blue);
+            color: var(--light-text);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--light-text);
+            font-size: 18px;
+            line-height: 40px;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+
+        footer p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 15px;
+                font-size: 13px;
+            }
+
+            .banner-text h2 {
+                font-size: 32px;
+            }
+
+            .banner-text p {
+                font-size: 16px;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .location-content {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .about-content h2 {
+                font-size: 28px;
+            }
+
+            .logo-section h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Início do banner -->
-<div class="banner">
-     <div class="banner-content">
-        <p>Aparelhos para venda ou aluguel no fim do site!</p>
-    </div>
-</div>
-<!-- Fim do banner -->
-
-    <!-- Banner -->
-    <div class="banner-container">
-        <ul class="banner" id="galfade88">
-            <li class="active"><img src="banner/b1.jpg" alt="Banner 1"></li>
-            <li><img src="banner/b2.jpg" alt="Banner 2"></li>
-            <li><img src="banner/b3.jpg" alt="Banner 3"></li>
-            <li><img src="banner/b4.jpg" alt="Banner 4"></li>
-            <li><img src="banner/logo.jpg" alt="Banner 5"></li>
-            
-        
-        </ul>
-    </div>
-    <!-- Início do Modal -->
-<div id="modalAviso" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Aviso importante</h2>
-        <p>SITE EM CONSTRUÇÃO, PORÉM A PARTE DE AGENDAMENTO JÁ ESTÁ DISPONÍVEL.</p>
-    </div>
-</div>
-<!-- Fim do Modal -->
-
-    
-
+    <!-- Header -->
     <header>
-    
-            <h3> Destaque da semana!</h3>
-    
-        
-        
-        <a href="https://instagram.com/drpierrepaiva?igshid=YmMyMTA2M2Y=" target="_b
-        " rel=" ext
-        "><img src="insta.png" alt="Instagram" class="insta-icon"></a>
-        <a href="https://www.facebook.com/profile.php?id=100063714443209&mibextid=LQQJ4d" target="_b
-        " rel=" external"><img src="face.png" alt="facebook" class="face-icon"></a>
-
-        <h1>Dr. Pierre Paiva</h1>
-        <h2>Médico Ultrassonografista</h2>
-        <h3>RQE 15343</h3>
-    </header>
-    
-        
-        
-            <section id="tema-do-mes"><a href="temames.html">Julho Amarelo: Mês de Luta contra as Hepatites Virais</a></section>
-            
-        </div>
-    </section>
-    <nav>
-        <ul class="menu">
-
-            <li><a href="banco-imagens.html">Banco de Imagens</a></li>
-            <li><a href="#exames">Exames</a></li>
-            <li><a href="#locais">Locais de Atendimento</a></li>
-            <li><a href="#agendamento">Agendamento</a></li>
-            <li><a href="tabela.html">Tabela de preços</a></li>
-        </ul>
-        
-    </nav>
-
-    <main>
-        
-        <section id="exames">
-            <h2>Exames</h2>
-            <ul class="exames-list">
-                <li><a href="abdominal.html">Abdominal total</a></li>
-                <li><a href="tireoide.html">Tireoide</a></li>
-                <li><a href="cervical.html">cervical</a></li>
-                <li><a href="obstetrica.html">Obstétrica</a></li>
-                <li><a href="obdoppler.html">Obstétrica com Doppler</a></li>
-                <li><a href="transvaginal.html">transvaginal</a></li>
-                <li><a href="pdeendom.html">Pesq. de endomemetriose</a></li>
-                <li><a href="mamaria.html">Mamária</a></li>
-                <li><a href="morfologica.html">Morfológica</a></li>
-                <li><a href="vias-urinarias.html">Vias urinárias</a></li>
-                <li><a href="prostatica.html">Próstata</a></li>
-                <li><a href="bolsa-escrotal.html">Bolsa escrotal</a></li>
-                <li><a href="mamamasculina.html">Mamária masculina</a></li>
-                <li><a href="pelvica.html">Pélvica</a></li>
-                <li><a href="parede-abdominal.html">Parede abdominal</a></li>
-                <li><a href="partes-moles.html">Partes moles</a></li>
-                <li><a href="reginguinal.html">Região inguinal</a></li>
-                <li><a href="cervicaldoppler.html">Doppler cervical</a></li>
-                <li><a href="doppler-carotidas-vertebrais.html">Doppler carótidas e vert.</a></li>
-                <li><a href="tireoide-doppler.html">Tireoide com Doppler</a></li>
-                <li><a href="dopplerrenal.html">Renal com Doppler</a></li>
-                <li><a href="doppler-venoso-mmii.html">Doppler ven. de MMII</a></li>
-                <li><a href="doppler-arterial-mmii.html">Doppler art. de MMII</a></li>
-                <li><a href="mks-joelho.html">MKS joelho</a></li>
-                <!-- Mais itens podem ser adicionados aqui -->
-            </ul>
-
-        </section>
-        
-            </section>
-            
-        </section>
-
-
-        
-        <h2>Locais de Atendimento</h2>
-        
-        <section id="locais">
-            <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-                <div style="width: 200px; margin: 10px;">
-                    <img src="complexo.jpg" alt="Local 1" style="width: 200px; height: 200px; object-fit: cover; border-radius: 25px;">
-                    <p><a href="https://goo.gl/maps/qHScaT3iRg95kn8w7" target="_blank">Policlínica, Rua Coronel Lúcio, nº 121, <strong>Crateús - CE</strong></p></a>
+        <div class="header-container">
+            <div class="logo-section">
+                <div>
+                    <h1>Dr. Pierre Paiva</h1>
+                    <p>Médico Ultrassonografista</p>
+                    <div class="rqe-badge">RQE 15343</div>
                 </div>
             </div>
-          </section>
-        
+            <nav>
+                <ul>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#location">Local</a></li>
+                    <li><a href="#scheduling">Agendamento</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <!-- Banner Principal -->
+    <section class="banner-section">
+        <div class="banner-container">
+            <div class="carousel">
+                <div class="carousel-item active">
+                    <img src="banner/b1.jpg" alt="Consultório">
+                </div>
+                <div class="carousel-item">
+                    <img src="banner/b2.jpg" alt="Dr. Pierre Paiva">
+                </div>
+                <div class="carousel-item">
+                    <img src="banner/b3.jpg" alt="Equipamento de Ultrassom">
+                </div>
+            </div>
+            <div class="carousel-overlay">
+                <div class="banner-text">
+                    <h2>Exames com Excelência</h2>
+                    <p>Diagnóstico preciso e cuidado profissional</p>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <span class="carousel-dot active" onclick="currentSlide(0)"></span>
+                <span class="carousel-dot" onclick="currentSlide(1)"></span>
+                <span class="carousel-dot" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+    </section>
 
-        <section id="agendamento">
-            <h2>Agendamento</h2>
-           <!-- Widget de link do Calendly - início -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<a href="#" class="agendamento-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/pierrepaiva/exames'});return false;">Agende um horário comigo<span></span></a>
+    <!-- Seção Sobre -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="foto-apresenta.jpg" alt="Dr. Pierre Paiva">
+            </div>
+            <div class="about-content">
+                <h2>Sobre o Dr. Pierre Paiva</h2>
+                <p>Médico ultrassonografista com vasta experiência em diagnóstico por imagem. Dedicado a oferecer exames de alta qualidade com tecnologia de ponta e atendimento humanizado.</p>
+                <p>Especializado em ultrassonografia geral, obstétrica, ginecológica e doppler, sempre buscando a excelência no diagnóstico e o bem-estar do paciente.</p>
+                <div class="credentials">
+                    <p>📋 Registro Profissional</p>
+                    <p>RQE: 15343</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Seção Serviços -->
+    <section class="services-section" id="services">
+        <div class="services-container">
+            <h2 class="section-title">Serviços Oferecidos</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Ultrassom Abdominal</h3>
+                    <p>Avaliação completa dos órgãos abdominais com tecnologia de alta resolução.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👶</div>
+                    <h3>Ultrassom Obstétrico</h3>
+                    <p>Acompanhamento gestacional com segurança e precisão diagnóstica.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🩺</div>
+                    <h3>Ultrassom Ginecológico</h3>
+                    <p>Avaliação completa do sistema reprodutivo feminino.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">❤️</div>
+                    <h3>Doppler Vascular</h3>
+                    <p>Avaliação do fluxo sanguíneo em artérias e veias.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🦴</div>
+                    <h3>Ultrassom Musculoesquelético</h3>
+                    <p>Análise de músculos, tendões e articulações.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔬</div>
+                    <h3>Ultrassom Tireoidiano</h3>
+                    <p>Avaliação da glândula tireóide com precisão diagnóstica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Seção Local de Atendimento -->
+    <section class="location-section" id="location">
+        <div class="location-container">
+            <h2 class="section-title">Local de Atendimento</h2>
+            <div class="location-content">
+                <div class="location-info">
+                    <h3>Policlínica</h3>
+                    <p>Atendimento em ambiente moderno e equipado com tecnologia de ponta para garantir o melhor diagnóstico.</p>
+                    <div class="location-address">
+                        <strong>📍 Endereço:</strong>
+                        <p>Rua Coronel Lúcio, nº 121<br>Crateús - CE</p>
+                    </div>
+                    <p style="margin-top: 20px; font-size: 14px; color: #888;">
+                        <strong>Horário de Funcionamento:</strong><br>
+                        Segunda a Sexta: 8h às 18h<br>
+                        Sábado: 8h às 12h
+                    </p>
+                </div>
+                <div class="location-image">
+                    <img src="complexo.jpg" alt="Policlínica">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Widget de link do Calendly - fim -->
-        </section>
-       
-    
-        
-    </main>
+    <!-- Seção Agendamento -->
+    <section class="scheduling-section" id="scheduling">
+        <div class="scheduling-container">
+            <h2 class="section-title">Agende seu Exame</h2>
+            <div class="scheduling-content">
+                <p>Clique no botão abaixo para agendar seu exame com o Dr. Pierre Paiva. Atendimento rápido e eficiente.</p>
+                <a href="https://calendly.com/pierrepaiva/exames" target="_blank" class="cta-button">Agendar Agora</a>
+            </div>
+        </div>
+    </section>
 
-
-
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2023 Dr. Pierre Paiva. Todos os direitos reservados.</p>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100063714443209" target="_blank" title="Facebook">f</a>
+                <a href="https://instagram.com/drpierrepaiva" target="_blank" title="Instagram">📷</a>
+                <a href="https://wa.me/5588992766974" target="_blank" title="WhatsApp">💬</a>
+            </div>
+            <p>&copy; 2026 Dr. Pierre Paiva. Todos os direitos reservados.</p>
+            <p style="font-size: 12px; margin-top: 10px; opacity: 0.8;">RQE 15343 | Médico Ultrassonografista</p>
+        </div>
     </footer>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        const dots = document.querySelectorAll('.carousel-dot');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index;
+            showSlide(currentSlideIndex);
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            showSlide(currentSlideIndex);
+        }
+
+        // Auto-play carousel a cada 5 segundos
+        setInterval(nextSlide, 5000);
+
+        // Smooth scroll para links de navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
