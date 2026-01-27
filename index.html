@@ -1057,19 +1057,7 @@
                     </div>
                 </div>
                 <div class="gallery-item" onclick="openGallery(3)">
-                    <img src="ecocardiograma1.jpg" alt="Ecocardiograma 1">
-                    <div class="gallery-overlay">
-                        <span class="gallery-icon">🔍</span>
-                    </div>
-                </div>
-                <div class="gallery-item" onclick="openGallery(4)">
-                    <img src="ecocardiograma2.jpg" alt="Ecocardiograma 2">
-                    <div class="gallery-overlay">
-                        <span class="gallery-icon">🔍</span>
-                    </div>
-                </div>
-                <div class="gallery-item" onclick="openGallery(5)">
-                    <img src="feto1.jpg" alt="Imagem Fetal 1">
+                    <img src="feto1.jpg" alt="Imagem Fetal">
                     <div class="gallery-overlay">
                         <span class="gallery-icon">🔍</span>
                     </div>
@@ -1096,8 +1084,8 @@
             <div class="videos-grid">
                 <div class="video-item">
                     <div class="video-wrapper">
-                        <video controls poster="consultorio1.jpg">
-                            <source src="IMG_3092.mov" type="video/mp4">
+                        <video controls poster="consultorio1.jpg" muted>
+                            <source src="IMG_3092.mp4" type="video/mp4">
                             Seu navegador não suporta vídeo HTML5.
                         </video>
                     </div>
@@ -1189,7 +1177,7 @@
         }
 
         // Gallery Lightbox Functions
-        const galleryImages = ['consultorio1.jpg', 'consultorio2.jpg', 'consultorio3.jpg', 'ecocardiograma1.jpg', 'ecocardiograma2.jpg', 'feto1.jpg'];
+        const galleryImages = ['consultorio1.jpg', 'consultorio2.jpg', 'consultorio3.jpg', 'feto1.jpg'];
         let currentImageIndex = 0;
 
         function openGallery(index) {
