@@ -452,9 +452,28 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(90, 58, 138, 0.12);
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: center;
+        }
+
+        .location-image {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(90, 58, 138, 0.2);
+        }
+
+        .location-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .location-image img:hover {
+            transform: scale(1.05);
         }
 
         .location-info h3 {
@@ -751,6 +770,9 @@
         <div class="location-container">
             <h2 class="section-title">Local de Atendimento</h2>
             <div class="location-content">
+                <div class="location-image">
+                    <img src="policlinica.jpg" alt="Fachada da Policlínica">
+                </div>
                 <div class="location-info">
                     <h3>Policlínica</h3>
                     <p>Atendimento em ambiente moderno e equipado com tecnologia de ponta para garantir o melhor diagnóstico.</p>
